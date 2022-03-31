@@ -5,3 +5,20 @@
   padding: 1rem;
   background-color: #ddd;
 }
+
+.wrapper {
+  position: relative;
+
+  .slider {
+    position: absolute;
+    width: 100vw;
+    bottom: 0;
+  }
+}
+
+.map {
+  .map-container {
+    width: 100vw;
+    height: calc(100vh - 3.4rem);
+  }
+}

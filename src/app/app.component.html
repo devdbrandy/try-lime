@@ -1,15 +1,17 @@
 <header class="header">
-  <img src="assets/logo.svg" alt="logo" class="header--logo" />
+  <img src="assets/logo.svg" alt="logo" />
 
   <nav class="header__menu">
     <img src="assets/burger-icon.svg" alt="menu" />
   </nav>
 </header>
 
-<main class="map-wrapper">
-  <!-- map -->
-  <div id="map"></div>
+<main class="wrapper">
+  <div class="map">
+    <lime-map [markers]="markers"></lime-map>
+  </div>
 
-  <!-- slider -->
-  <lime-hotel-slider></lime-hotel-slider>
+  <div class="slider">
+    <lime-hotel-slider [hotels]="hotels"></lime-hotel-slider>
+  </div>
 </main>

@@ -4,6 +4,8 @@ import { NgModule } from '@angular/core';
 import { SwiperModule } from 'swiper/angular';
 
 import { AppRoutingModule } from './app-routing.module';
+import { GoogleMapsModule } from '@angular/google-maps';
+
 import { AppComponent } from './app.component';
 import { HotelSliderComponent } from './components/hotel-slider/hotel-slider.component';
 import { MapComponent } from './components/map/map.component';
@@ -16,7 +18,7 @@ import { HotelCardComponent } from './components/hotel-card/hotel-card.component
     MapComponent,
     HotelCardComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, SwiperModule],
+  imports: [BrowserModule, AppRoutingModule, SwiperModule, GoogleMapsModule],
   providers: [],
   bootstrap: [AppComponent],
 })

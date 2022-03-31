@@ -1,1 +1,13 @@
-<p>map works!</p>
+<google-map
+  [width]="null"
+  [height]="null"
+  [center]="center"
+  [options]="options"
+>
+  <map-marker
+    #markerEl="mapMarker"
+    *ngFor="let marker of markers; index as i"
+    [options]="marker"
+    (mapClick)="handleMarkerClick(markerEl, i)"
+  ></map-marker>
+</google-map>

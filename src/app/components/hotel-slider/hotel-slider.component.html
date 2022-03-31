@@ -1,17 +1,10 @@
 <swiper
+  #swiper
   [slidesPerView]="'auto'"
   [spaceBetween]="16"
-  [pagination]="{
-    clickable: true
-  }"
+  (slideChange)="onSlideChange($event)"
 >
-  <ng-template swiperSlide>
-    <lime-hotel-card></lime-hotel-card>
-  </ng-template>
-  <ng-template swiperSlide>
-    <lime-hotel-card></lime-hotel-card>
-  </ng-template>
-  <ng-template swiperSlide>
-    <lime-hotel-card></lime-hotel-card>
+  <ng-template swiperSlide *ngFor="let hotel of hotels">
+    <lime-hotel-card [hotel]="hotel"></lime-hotel-card>
   </ng-template>
 </swiper>
