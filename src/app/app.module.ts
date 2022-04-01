@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { SwiperModule } from 'swiper/angular';
@@ -26,10 +27,11 @@ import { BookingFormComponent } from './components/booking-form/booking-form.com
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
+    BrowserAnimationsModule,
     SwiperModule,
     GoogleMapsModule,
     SimpleModalModule,
-    BrowserAnimationsModule,
     ToastrModule.forRoot(),
   ],
   providers: [],

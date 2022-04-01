@@ -5,10 +5,12 @@ import {
   ViewChild,
   ViewEncapsulation,
 } from '@angular/core';
-import { SwiperComponent } from 'swiper/angular';
-import { SliderService } from '../../services/slider.service';
-import { IHotel } from '../../models/hotel.model';
+
 import Swiper from 'swiper';
+import { SwiperComponent } from 'swiper/angular';
+
+import { SliderService } from '@lime-services/slider.service';
+import { IHotel } from '@lime-models/hotel.model';
 
 @Component({
   selector: 'lime-hotel-slider',

@@ -21,3 +21,7 @@ export interface IAddress {
   postalCode: string;
   houseNumber: string;
 }
+
+export interface IHotelsResponseBody {
+  items: IHotel[];
+}

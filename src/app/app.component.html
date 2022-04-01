@@ -6,7 +6,7 @@
   </nav>
 </header>
 
-<main class="wrapper">
+<main class="wrapper" *ngIf="!isLoadingHotels">
   <div class="map">
     <lime-map [markers]="markers"></lime-map>
   </div>

@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { SimpleModalComponent } from 'ngx-simple-modal';
-import { IHotel } from 'src/app/models/hotel.model';
+
+import { IHotel } from '@lime-models/hotel.model';
 
 export interface PromptModel {
   hotel: IHotel;

@@ -10,12 +10,12 @@ import {
 
 import { GoogleMap, MapMarker } from '@angular/google-maps';
 
-import { SliderService } from '../../services/slider.service';
+import { SliderService } from '@lime-services/slider.service';
 import {
   ACTIVE_MARKER_ICON,
   MARKER_ICON,
   MUNICH_COORDINATES,
-} from '../../models/location.model';
+} from '@lime-models/location.model';
 
 @Component({
   selector: 'lime-map',
