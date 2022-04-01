@@ -15,6 +15,7 @@ import { HotelSliderComponent } from './components/hotel-slider/hotel-slider.com
 import { MapComponent } from './components/map/map.component';
 import { HotelCardComponent } from './components/hotel-card/hotel-card.component';
 import { BookingFormComponent } from './components/booking-form/booking-form.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,8 @@ import { BookingFormComponent } from './components/booking-form/booking-form.com
     AppRoutingModule,
     HttpClientModule,
     BrowserAnimationsModule,
+    FormsModule,
+    ReactiveFormsModule,
     SwiperModule,
     GoogleMapsModule,
     SimpleModalModule,

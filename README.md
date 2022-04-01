@@ -22,7 +22,7 @@ npm i
 
 ## TODO
 
-- [ ] Add form handler
+- [x] Add form handler
 - [ ] Add tests
 
 ## Development server

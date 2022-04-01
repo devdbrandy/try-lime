@@ -4,38 +4,53 @@
   </div>
 
   <div class="modal-body">
+    <h4>- {{ hotel?.title }} -</h4>
     <p>Please complete the form below.</p>
 
-    <div class="row">
-      <div class="col">
-        <label>First Name</label>
-        <input type="text" class="form-control" name="firstName" />
+    <form [formGroup]="form">
+      <div class="row">
+        <div class="col">
+          <label>First Name</label>
+          <input
+            type="text"
+            class="form-control"
+            name="firstName"
+            formControlName="firstName"
+          />
+        </div>
+        <div class="col">
+          <label>Last Name</label>
+          <input
+            type="text"
+            class="form-control"
+            name="lastName"
+            formControlName="lastName"
+          />
+        </div>
       </div>
-      <div class="col">
-        <label>Last Name</label>
-        <input type="text" class="form-control" name="lastName" />
+      <div class="row">
+        <div class="col">
+          <label>Email</label>
+          <input
+            type="text"
+            class="form-control"
+            name="email"
+            placeholder="myname@example.com"
+            formControlName="email"
+          />
+        </div>
+        <div class="col">
+          <label>Phone Number</label>
+          <input
+            type="text"
+            class="form-control"
+            name="phoneNumber"
+            placeholder="(000) 000-0000"
+            formControlName="phoneNumber"
+          />
+        </div>
       </div>
-    </div>
-    <div class="row">
-      <div class="col">
-        <label>Email</label>
-        <input
-          type="text"
-          class="form-control"
-          name="email"
-          placeholder="myname@example.com"
-        />
-      </div>
-      <div class="col">
-        <label>Phone Number</label>
-        <input
-          type="text"
-          class="form-control"
-          name="phoneNumber"
-          placeholder="(000) 000-0000"
-        />
-      </div>
-    </div>
+    </form>
   </div>
 
   <div class="modal-footer">
@@ -46,7 +61,7 @@
       type="button"
       class="btn btn--primary"
       (click)="submit()"
-      [disabled]="isSubmitting"
+      [disabled]="form.invalid || isSubmitting"
     >
       {{ isSubmitting ? "Submitting..." : "Submit" }}
     </button>

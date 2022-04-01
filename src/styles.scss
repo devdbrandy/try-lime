@@ -20,6 +20,9 @@ body {
   }
 }
 
+// variables
+$primaryColor: #f7941d;
+
 .btn {
   border: none;
   background: none;
@@ -28,13 +31,19 @@ body {
   font-size: 1rem;
   padding: 0.7rem 1.5rem;
   letter-spacing: 1px;
+  cursor: pointer;
 
   &--default {
-    background: #ddd;
+    background-color: #ddd;
   }
 
   &--primary {
-    background: #f7941d;
+    background-color: $primaryColor;
     color: #fff;
+
+    &:disabled {
+      background-color: lighten($primaryColor, 20%);
+      cursor: not-allowed;
+    }
   }
 }
