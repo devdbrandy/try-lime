@@ -1,6 +1,29 @@
 # LimeFrontend
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.8.
+A minimalistic hotel booking UI built with Angular & Google Maps API
+
+## Screenshot
+
+<img src="/screenshots/screenshot-01.png" width="320" />
+<img src="/screenshots/screenshot-02.png" width="320" />
+<img src="/screenshots/screenshot-03.png" width="320" />
+
+## Setup
+
+- Run the following command to setup project:
+
+```bash
+git clone git@github.com:devdbrandy/try-lime.git
+cd try-lime
+npm i
+```
+
+- Run `npm start` to spin up the server 🚀
+
+## TODO
+
+- [ ] Add form handler
+- [ ] Add tests
 
 ## Development server
 

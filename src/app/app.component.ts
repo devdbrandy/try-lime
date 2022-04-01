@@ -28,14 +28,24 @@ export class AppComponent implements OnInit, OnDestroy {
 
   getHotels(): void {
     this.isLoadingHotels = true;
-    const subscribe = this.hotelsService.getHotels().subscribe((res) => {
-      this.hotels = res.items;
-      this.getSetMarkers(this.hotels);
-
-      this.isLoadingHotels = false;
-    });
+    const subscribe = this.hotelsService.getHotels().subscribe(
+      (res) => {
+        this.setHotelsAndMarkers(res.items);
+        this.isLoadingHotels = false;
+      },
+      (err) => {
+        // for demo purpose only
+        this.setHotelsAndMarkers(this.hotelsService.hotelSampleData.items);
+        this.isLoadingHotels = false;
+      }
+    );
 
     this.subscriptions.push(subscribe);
+  }
+
+  setHotelsAndMarkers(hotels: IHotel[]): void {
+    this.hotels = hotels;
+    this.getSetMarkers(hotels);
   }
 
   getSetMarkers(hotels: IHotel[]): void {

@@ -11,13 +11,14 @@ import { hotelsAPIData } from '../hotels.data';
 })
 export class HotelsService {
   baseUrl = environment.apiBaseUrl;
+  hotelSampleData = { ...hotelsAPIData };
 
   constructor(private http: HttpClient) {}
 
   getHotels(): Observable<IHotelsResponseBody> {
     // for production demo purpose only
     if (environment.production) {
-      return of(hotelsAPIData);
+      return of(this.hotelSampleData);
     }
 
     return this.http.get(`${this.baseUrl}/hotels`) as Observable<
