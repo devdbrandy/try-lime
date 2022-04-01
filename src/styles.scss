@@ -7,17 +7,34 @@
 html,
 body {
   font-family: "Montserrat", sans-serif;
-  font-size: 16px;
+  font-size: 15px;
   font-weight: normal;
   width: 100%;
   height: 100%;
   background: #eee;
 }
 
-button {
+@media (max-width: 480px) {
+  body {
+    font-size: 14px;
+  }
+}
+
+.btn {
   border: none;
   background: none;
   box-shadow: none;
   font-family: "Montserrat", sans-serif;
   font-size: 1rem;
+  padding: 0.7rem 1.5rem;
+  letter-spacing: 1px;
+
+  &--default {
+    background: #ddd;
+  }
+
+  &--primary {
+    background: #f7941d;
+    color: #fff;
+  }
 }

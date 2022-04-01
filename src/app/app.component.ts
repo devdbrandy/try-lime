@@ -14,7 +14,7 @@ export class AppComponent implements OnInit {
   title = 'lime-frontend';
 
   hotels: IHotel[] = [];
-  markers = [];
+  markers: google.maps.MarkerOptions[] = [];
 
   constructor() {}
 
