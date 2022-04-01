@@ -8,6 +8,11 @@ A minimalistic hotel booking UI built with Angular & Google Maps API
 <img src="/screenshots/screenshot-02.png" width="320" />
 <img src="/screenshots/screenshot-03.png" width="320" />
 
+---
+
+<img src="/screenshots/screenshot-07.png" />
+<img src="/screenshots/screenshot-08.png" />
+
 ## Setup
 
 - Run the following command to setup project:
